@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar transparent>
+   <ion-title>Edit Employee Details</ion-title>
+  <ion-buttons end>
+   <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content>
+   <ion-list>
+     <ion-item>
+       <ion-label floating>Name</ion-label>
+       <ion-input [(ngModel)]="name" type="text"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-label floating>Department</ion-label>
+      <ion-input [(ngModel)]="department" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Amount</ion-label>
+      <ion-input [(ngModel)]="amount" type="number"></ion-input>
+    </ion-item>
+   </ion-list>
+   <button ion-button full color="secondary" (click)="save()">Save</button>
+ </ion-content>
